@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Car{
+            constructor(make,speed){
+                this.make = make;
+                this.speed =speed;
+            }
+            get speedUS(){
+                return ` speed of the ${this.make} is ${this.speed / 1.6}`
+            }
+            set speedUS(sp){
+               this.speed *= 1.6;
+            }
+            acclerate(){
+                return this.speed += 10;
+            }
+            break(){
+              return  this.speed -= 5;
+            }
+        }
+
+        const BMW = new Car("BMW",300);
+        const Benz = new  Car("benz",250) ;
+        console.log(BMW.speedUS)
+        console.log(BMW.speedUS)
+        console.log(BMW.acclerate());
+        console.log(BMW.acclerate());
+        console.log(BMW.break());
+        console.log(BMW.break());
+
+        console.log(Benz.speedUS)
+        console.log(Benz.speedUS)
+        console.log(Benz.acclerate());
+        console.log(Benz.acclerate());
+        console.log(Benz.break());
+        console.log(Benz.break());
+
+        BMW.speedUS = 1000;
+        console.log(BMW.speedUS)
+        console.log(BMW.acclerate())
+        console.log(BMW.acclerate())
+        console.log(BMW.break())
+        console.log(BMW.break())
+
+       
+
+    </script>
+</body>
+</html>

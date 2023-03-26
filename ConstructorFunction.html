@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id = "acc" Onclick=(acclerate)>accelerate</button>
+    <button id = "bre">break</button>
+    <script>
+      const Car = function(make,speed){
+         this.make = make;
+         this.speed=speed;
+      }
+      Car.prototype.accelerate = function(){
+         return this.speed += 10;
+      }
+      Car.prototype.break = function(){
+         return this.speed -= 5;
+      }
+      const BMW = new Car("BMW",300);
+      const Ferrari = new Car("Ferrari",250);
+
+     console.log( BMW.accelerate());
+     console.log( BMW.accelerate());
+     console.log( BMW.accelerate());
+      console.log(BMW.break())
+      console.log(BMW.break())
+      console.log(BMW.break())
+      console.log(Ferrari.accelerate());
+      console.log(Ferrari.break());
+
+    </script>
+</body>
+</html>
